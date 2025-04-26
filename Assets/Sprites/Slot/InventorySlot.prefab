@@ -96,10 +96,13 @@ MonoBehaviour:
   ItemSprite: {fileID: 0}
   IsFull: 0
   ItemDescription: 
+  EmptySprite: {fileID: 0}
+  MaxNumberOfItems: 9
   QuantityText: {fileID: 1752970053902772102}
   ItemImage: {fileID: 4038145713629283453}
   SelectedShader: {fileID: 4265515517432446355}
   ThisItemSelected: 0
+  InventoryManager: {fileID: 0}
   ItemDescriptionImage: {fileID: 0}
   ItemDescriptionNameText: {fileID: 0}
   ItemDescriptionText: {fileID: 0}

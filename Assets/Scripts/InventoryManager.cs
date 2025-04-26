@@ -25,18 +25,23 @@ public class InventoryManager : MonoBehaviour
         cooldown = 0;
     }
     // Update is called once per frame
-    public void AddItem(string ItemName,int Quantity, Sprite Sprite)
+    public int  AddItem(string ItemName,int Quantity, Sprite Sprite, string ItemDescription)
     {
-        Debug.Log("item name=" +  ItemName + " quanity " + Quantity );
+        //Debug.Log("item name=" +  ItemName + " quanity " + Quantity );
         for (int i = 0; i < ItemSlot.Length; i++)
         {
-            if (ItemSlot[i].IsFull == false)
+            if (ItemSlot[i].IsFull == false && ItemSlot[i].name == name || ItemSlot[i].Quantity == 0 )
             {
-                ItemSlot[i].AddItem(ItemName, Quantity, Sprite);
-                return;
+                int LeftOverItems = ItemSlot[i].AddItem(ItemName, Quantity, Sprite,ItemDescription);
+                Debug.Log(LeftOverItems);
+                if (LeftOverItems > 0)
+                {
+                    LeftOverItems= AddItem(ItemName, LeftOverItems, Sprite,ItemDescription);
+                }
+                return LeftOverItems;
             }
         }
-
+        return Quantity;
     }
     public void DeselectAllSlots()
     {
