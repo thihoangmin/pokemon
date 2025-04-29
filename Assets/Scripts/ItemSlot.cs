@@ -18,7 +18,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public string ItemDescription;
     public Sprite EmptySprite;
     [SerializeField]
-    private int MaxNumberOfItems;
+    public Dictionary<string, int> MaxNumberOfItems = new Dictionary<string, int>();
     // Itemslot //
     [SerializeField]
     private TMP_Text QuantityText;
@@ -39,6 +39,13 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     }
     public int AddItem(string ItemName, int Quantity, Sprite Sprite, string ItemDescription)
     {
+        if (MaxNumberOfItems.Count == 0)
+        {
+            MaxNumberOfItems["potion"] = 5;
+            MaxNumberOfItems["Coin"] = 999;
+            MaxNumberOfItems["Fish"] = 30;
+            MaxNumberOfItems["Key"] = 1;
+        }
         //Check if inventory is full
         if (IsFull)
             return Quantity;
@@ -49,15 +56,15 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         this.ItemDescription = ItemDescription;
         //Update quantity, return leftovers base on max items
         this.Quantity += Quantity;
-        if (this.Quantity >= MaxNumberOfItems)
+        if (this.Quantity >= MaxNumberOfItems[ItemName])
         {
-            QuantityText.text = MaxNumberOfItems.ToString();
+            QuantityText.text = MaxNumberOfItems[ItemName].ToString();
             QuantityText.enabled = true;
             IsFull = true;
 
 
-            int ExtraItems = this.Quantity - MaxNumberOfItems; 
-            this.Quantity = MaxNumberOfItems;
+            int ExtraItems = this.Quantity - MaxNumberOfItems[ItemName]; 
+            this.Quantity = MaxNumberOfItems[ItemName];
             return ExtraItems;
         }
 
