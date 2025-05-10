@@ -30,7 +30,7 @@ public class InventoryManager : MonoBehaviour
         //Debug.Log("item name=" +  ItemName + " quanity " + Quantity );
         for (int i = 0; i < ItemSlot.Length; i++)
         {
-            if (ItemSlot[i].IsFull == false && ItemSlot[i].name == name || ItemSlot[i].Quantity == 0 )
+            if (ItemSlot[i].IsFull == false && (ItemSlot[i].ItemName == ItemName || ItemSlot[i].Quantity == 0) )
             {
                 int LeftOverItems = ItemSlot[i].AddItem(ItemName, Quantity, Sprite,ItemDescription);
                 Debug.Log(LeftOverItems);
