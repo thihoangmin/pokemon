@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a723d3ab806a7de4ba149a08974d4d84, type: 3}
   m_Name: Greetings with Bob
   m_EditorClassIdentifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: 113bd8b1c8bd68a47a737d965a7a1336, type: 2}
+    text: Hello ban chay di dau v
+  - speaker: {fileID: 11400000, guid: 2777dc18b5df4f14a96076acd8f301a2, type: 2}
+    text: Toi lac roi
