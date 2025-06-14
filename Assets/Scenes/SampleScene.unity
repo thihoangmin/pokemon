@@ -1270,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!225 &196815127
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5625,6 +5625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionAnimator: {fileID: 1895764106}
+  dialogueCanvas: {fileID: 196815126}
 --- !u!1 &653069537
 GameObject:
   m_ObjectHideFlags: 0
@@ -57821,8 +57822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.25, y: -40.47}
-  m_SizeDelta: {x: 500.1444, y: 455.8468}
+  m_AnchoredPosition: {x: 32, y: -19}
+  m_SizeDelta: {x: 176.5071, y: 181.2368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831889473
 MonoBehaviour:
@@ -57844,7 +57845,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 93091016, guid: f2409a3bfafb4814f8d61541121eb905, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc29145ee1eaf4b89bdd0b395dcf00df, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

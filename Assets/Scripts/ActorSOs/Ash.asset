@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Ash
   m_EditorClassIdentifier: 
   actorName: Ash
-  portrait: {fileID: 2130936915, guid: 0ba330de9939b0349b298b359f9ed082, type: 3}
+  portrait: {fileID: 21300000, guid: 945b51449e71f40419263d65a12ce8e1, type: 3}

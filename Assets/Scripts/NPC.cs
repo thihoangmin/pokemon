@@ -11,6 +11,7 @@ public class NPCTalk : MonoBehaviour
     //public Sprite Portrait;
     private Rigidbody2D rb;
     public Animator interactionAnimator;
+    public GameObject dialogueCanvas;
 
     void Start()
     {
@@ -28,13 +29,15 @@ public class NPCTalk : MonoBehaviour
         {
             Debug.Log("Cham ne");
             interactionAnimator.Play("OpenDialogue");
+            dialogueCanvas.SetActive(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("exit ne");
         interactionAnimator.Play("CloseDialogue");
+        dialogueCanvas.SetActive(false);
+
     }
 
 }
