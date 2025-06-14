@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d3d506e4f1412448a7549c85a5a205, type: 3}
   m_Name: Ash
   m_EditorClassIdentifier: 
-  actorName: 
-  portrait: {fileID: 0}
+  actorName: Ash
+  portrait: {fileID: 2130936915, guid: 0ba330de9939b0349b298b359f9ed082, type: 3}
